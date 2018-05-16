@@ -1,4 +1,4 @@
-package com.liquid.restApi.datos.dao.hibernate.model;
+package com.liquid.restApi.datos.dao.spring.model;
 
 import com.liquid.restApi.datos.model.Greeting;
 
