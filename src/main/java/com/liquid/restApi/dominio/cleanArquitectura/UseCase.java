@@ -1,4 +1,4 @@
-package com.liquid.restApi.dominio.iterador.cleanArquitectura;
+package com.liquid.restApi.dominio.cleanArquitectura;
 
 
 @FunctionalInterface

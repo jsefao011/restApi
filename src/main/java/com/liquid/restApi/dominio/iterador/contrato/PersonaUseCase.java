@@ -1,9 +1,9 @@
 package com.liquid.restApi.dominio.iterador.contrato;
 
 import com.liquid.restApi.datos.model.Persona;
-import com.liquid.restApi.dominio.iterador.cleanArquitectura.Request;
-import com.liquid.restApi.dominio.iterador.cleanArquitectura.Response;
-import com.liquid.restApi.dominio.iterador.cleanArquitectura.UseCase;
+import com.liquid.restApi.dominio.cleanArquitectura.Request;
+import com.liquid.restApi.dominio.cleanArquitectura.Response;
+import com.liquid.restApi.dominio.cleanArquitectura.UseCase;
 
 public interface PersonaUseCase extends UseCase<PersonaUseCase.PersonaRequest, PersonaUseCase.PersonaResponse> {
 

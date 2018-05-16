@@ -1,8 +1,8 @@
 package com.liquid.restApi.dominio.iterador;
 
-import com.liquid.restApi.dominio.iterador.cleanArquitectura.Request;
-import com.liquid.restApi.dominio.iterador.cleanArquitectura.Response;
-import com.liquid.restApi.dominio.iterador.cleanArquitectura.UseCase;
+import com.liquid.restApi.dominio.cleanArquitectura.Request;
+import com.liquid.restApi.dominio.cleanArquitectura.Response;
+import com.liquid.restApi.dominio.cleanArquitectura.UseCase;
 
 public interface PersonaIterador extends UseCase<Request, Response> {
 
