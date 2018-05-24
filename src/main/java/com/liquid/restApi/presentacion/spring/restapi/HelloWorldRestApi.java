@@ -1,7 +1,7 @@
 package com.liquid.restApi.presentacion.spring.restapi;
 
 import com.liquid.restApi.datos.dao.hibernate.model.GreetingImpl;
-import com.liquid.restApi.datos.model.Greeting;
+import com.liquid.restApi.datos.contrato.model.Greeting;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

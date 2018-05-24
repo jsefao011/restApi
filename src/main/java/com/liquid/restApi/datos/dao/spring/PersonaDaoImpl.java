@@ -1,29 +1,32 @@
 package com.liquid.restApi.datos.dao.spring;
 
-import com.liquid.restApi.datos.PersonaDao;
-import com.liquid.restApi.datos.dao.hibernate.model.PersonaImpl;
-import com.liquid.restApi.datos.model.Persona;
+import com.liquid.restApi.datos.contrato.PersonaDao;
+import com.liquid.restApi.datos.contrato.model.Persona;
+import com.liquid.restApi.datos.dao.spring.model.PersonaImpl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PersonaDaoImpl implements PersonaDao {
     @Override
     public List<Persona> all() {
-        return null;
+        List<Persona> personaList = new ArrayList<>();
+        personaList.add(new PersonaImpl("0","all Spring"));
+        return personaList;
     }
 
     @Override
     public Persona get(String id) {
-        return new PersonaImpl("1","PersonaSpring");
+        return new PersonaImpl("2","PersonaSpring");
     }
 
     @Override
-    public String add(PersonaDao personaDao) {
+    public String add(Persona tabla) {
         return null;
     }
 
     @Override
-    public boolean update(PersonaDao personaDao) {
+    public boolean update(String id, Persona tabla) {
         return false;
     }
 

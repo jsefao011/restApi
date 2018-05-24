@@ -1,6 +1,6 @@
 package com.liquid.restApi.dominio.iterador.contrato;
 
-import com.liquid.restApi.datos.model.Persona;
+import com.liquid.restApi.datos.contrato.model.Persona;
 import com.liquid.restApi.dominio.cleanArquitectura.Request;
 import com.liquid.restApi.dominio.cleanArquitectura.Response;
 import com.liquid.restApi.dominio.cleanArquitectura.UseCase;

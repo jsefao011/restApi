@@ -1,7 +1,7 @@
 package com.liquid.restApi.dominio.iterador.logica;
 
-import com.liquid.restApi.datos.PersonaDao;
-import com.liquid.restApi.datos.model.Persona;
+import com.liquid.restApi.datos.contrato.PersonaDao;
+import com.liquid.restApi.datos.contrato.model.Persona;
 import com.liquid.restApi.dominio.iterador.contrato.PersonaUseCase;
 
 public class PersonaUseCaseImpl implements PersonaUseCase {

@@ -1,6 +1,6 @@
 package com.liquid.restApi.datos.dao.spring.model;
 
-import com.liquid.restApi.datos.model.Persona;
+import com.liquid.restApi.datos.contrato.model.Persona;
 
 /**
  * Created by Jse on 13/05/2018.

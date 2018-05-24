@@ -1,6 +1,6 @@
 package com.liquid.restApi.datos.dao.spring.model;
 
-import com.liquid.restApi.datos.model.Greeting;
+import com.liquid.restApi.datos.contrato.model.Greeting;
 
 import java.util.List;
 
