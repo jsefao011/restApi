@@ -16,4 +16,5 @@ public interface PersonaUseCase extends UseCase<PersonaUseCase.PersonaRequest, P
         Persona getPersona();
     }
 
+
 }
