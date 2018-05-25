@@ -1,4 +1,4 @@
-package com.liquid.restApi.datos.dao.hibernate.util;
+package com.liquid.restApi.datos.logica.hibernate.util;
 
 import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;

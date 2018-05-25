@@ -1,6 +1,6 @@
 package com.liquid.restApi.dominio.iterador.logica;
 
-import com.liquid.restApi.datos.contrato.PersonaDao;
+import com.liquid.restApi.datos.contrato.dao.PersonaDao;
 import com.liquid.restApi.datos.contrato.model.Persona;
 import com.liquid.restApi.dominio.iterador.contrato.PersonaUseCase;
 

@@ -1,6 +1,6 @@
 package com.liquid.restApi.presentacion.spring.util;
 
-import com.liquid.restApi.datos.dao.hibernate.PersonaDaoImpl;
+import com.liquid.restApi.datos.logica.hibernate.dao.PersonaDaoImpl;
 import com.liquid.restApi.presentacion.controller.ConsultarPersonaController;
 import com.liquid.restApi.presentacion.controller.ConsultarPersonaControllerImpl;
 

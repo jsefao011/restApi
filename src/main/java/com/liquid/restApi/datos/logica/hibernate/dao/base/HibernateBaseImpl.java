@@ -1,8 +1,8 @@
-package com.liquid.restApi.datos.dao.hibernate.base;
+package com.liquid.restApi.datos.logica.hibernate.dao.base;
 
-import com.liquid.restApi.datos.contrato.base.BaseDao;
+import com.liquid.restApi.datos.contrato.dao.base.BaseDao;
 import com.liquid.restApi.datos.contrato.model.Persona;
-import com.liquid.restApi.datos.dao.hibernate.util.HibernateUtil5;
+import com.liquid.restApi.datos.logica.hibernate.util.HibernateUtil5;
 
 import org.hibernate.Session;
 

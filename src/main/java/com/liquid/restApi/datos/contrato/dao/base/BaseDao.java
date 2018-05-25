@@ -1,6 +1,5 @@
-package com.liquid.restApi.datos.contrato.base;
+package com.liquid.restApi.datos.contrato.dao.base;
 
-import com.liquid.restApi.datos.contrato.PersonaDao;
 import com.liquid.restApi.datos.contrato.model.Persona;
 
 import java.util.List;

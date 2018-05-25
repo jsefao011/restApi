@@ -1,6 +1,6 @@
 package com.liquid.restApi.presentacion.controller;
 
-import com.liquid.restApi.datos.contrato.PersonaDao;
+import com.liquid.restApi.datos.contrato.dao.PersonaDao;
 import com.liquid.restApi.datos.contrato.model.Persona;
 
 import java.util.List;
