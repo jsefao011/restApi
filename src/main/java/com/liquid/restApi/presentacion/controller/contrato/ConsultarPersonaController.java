@@ -1,4 +1,4 @@
-package com.liquid.restApi.presentacion.controller;
+package com.liquid.restApi.presentacion.controller.contrato;
 
 import com.liquid.restApi.datos.contrato.model.Persona;
 

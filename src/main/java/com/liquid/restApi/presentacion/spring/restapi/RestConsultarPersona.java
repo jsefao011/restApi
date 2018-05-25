@@ -1,7 +1,7 @@
 package com.liquid.restApi.presentacion.spring.restapi;
 
 import com.liquid.restApi.datos.contrato.model.Persona;
-import com.liquid.restApi.presentacion.controller.ConsultarPersonaController;
+import com.liquid.restApi.presentacion.controller.contrato.ConsultarPersonaController;
 import com.liquid.restApi.presentacion.spring.util.InjectHibernate;
 
 import org.springframework.stereotype.Controller;
