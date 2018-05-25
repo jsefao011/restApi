@@ -11,32 +11,12 @@ import org.hibernate.Session;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PersonaDaoImpl  implements PersonaDao {
+public class PersonaDaoImpl extends HibernateBaseImpl<Persona>  implements PersonaDao {
 
 
     @Override
-    public List<Persona> all() {
-
-        List<Persona> personalist = new ArrayList<>();
-        /*personalist.add(new PersonaImpl("0","Sin definir"));
-        try {
-            // Getting Session Object From SessionFactory
-            sessionObj = HibernateUtil5.getSessionFactory().openSession();
-            // Getting Transaction Object From Session Object
-            sessionObj.beginTransaction();
-
-            personalist = sessionObj.createQuery("FROM PersonaImpl").list();
-        } catch(Exception sqlException) {
-            if(null != sessionObj.getTransaction()) {
-                sessionObj.getTransaction().rollback();
-            }
-            sqlException.printStackTrace();
-        } finally {
-            if(sessionObj != null) {
-                sessionObj.close();
-            }
-        }*/
-        return personalist;
+    protected String getTableClass() {
+        return PersonaImpl.class.getSimpleName();
     }
 
     @Override

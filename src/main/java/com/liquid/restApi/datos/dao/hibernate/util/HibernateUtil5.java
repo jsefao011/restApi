@@ -7,15 +7,11 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-public class HibernateUtil5 implements HibernateUtil<SessionFactory>{
-    private final SessionFactory sessionFactory;
+public class HibernateUtil5 {
 
-    public HibernateUtil5(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
+    private static SessionFactory sessionFactory = buildSessionFactory();
 
-    @Override
-    public SessionFactory buildSessionFactory() {
+    public static SessionFactory buildSessionFactory() {
         try {
             StandardServiceRegistry standardRegistry = new StandardServiceRegistryBuilder()
                     .configure("hibernate.cfg.xml").build();
@@ -28,9 +24,9 @@ public class HibernateUtil5 implements HibernateUtil<SessionFactory>{
         }
     }
 
-    @Override
-    public SessionFactory getSessionFactory() {
+    public static SessionFactory getSessionFactory() {
         return sessionFactory;
     }
+
 }
 
