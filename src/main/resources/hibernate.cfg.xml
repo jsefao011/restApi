@@ -4,8 +4,7 @@
 <hibernate-configuration>
     <session-factory>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">
-            jdbc:mysql://localhost:3306/prueba</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/api_tabla_maestras</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password"></property>
         <property name="hibernate.connection.pool_size">10</property>
@@ -13,5 +12,16 @@
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
         <mapping class="com.liquid.restApi.datos.logica.hibernate.model.PersonaImpl"/>
+        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiRelPersonaDiscapacidadEntity"/>
+        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmDepartamentoEntity"/>
+        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmDiscapacidadEntity"/>
+        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmDistritoEntity"/>
+        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmDocumentoEntity"/>
+        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmEstadoCivilEntity"/>
+        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmNivelAcademicoEntity"/>
+        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmPersonaEntity"/>
+        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmProvinciaEntity"/>
+        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmReligionEntity"/>
+        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmSexoEntity"/>
     </session-factory>
 </hibernate-configuration>

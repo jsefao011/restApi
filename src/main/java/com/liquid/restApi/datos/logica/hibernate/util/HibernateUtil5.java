@@ -7,14 +7,19 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-public class HibernateUtil5 {
+public abstract class HibernateUtil5 {
 
-    private static SessionFactory sessionFactory = buildSessionFactory();
+    private SessionFactory sessionFactory;
 
-    public static SessionFactory buildSessionFactory() {
+    public HibernateUtil5() {
+        this.sessionFactory = buildSessionFactory();
+    }
+
+    //"hibernate.cfg.xml"
+    public SessionFactory buildSessionFactory() {
         try {
             StandardServiceRegistry standardRegistry = new StandardServiceRegistryBuilder()
-                    .configure("hibernate.cfg.xml").build();
+                    .configure(getResourceName()).build();
             Metadata metadata = new MetadataSources(standardRegistry).getMetadataBuilder().build();
             return metadata.getSessionFactoryBuilder().build();
 
@@ -24,9 +29,11 @@ public class HibernateUtil5 {
         }
     }
 
-    public static SessionFactory getSessionFactory() {
+    protected   SessionFactory getSessionFactory() {
         return sessionFactory;
     }
+
+    protected abstract String getResourceName();
 
 }
 
