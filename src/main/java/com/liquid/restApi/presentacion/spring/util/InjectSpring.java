@@ -13,5 +13,4 @@ public class InjectSpring {
     public static ConsultarPersonaController injectPersonaControllerSpring(){
         return new ConsultarPersonaControllerImpl(new PersonaIteradorImpl(new PersonaDaoImpl()));
     }
-
 }

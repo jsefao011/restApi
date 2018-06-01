@@ -5,7 +5,15 @@ package com.liquid.restApi.datos.contrato.model;
  */
 public interface Sexo {
 
-    String getId();
+    int getId();
 
-    void setId(String id);
+    void setId(int id);
+
+    String getNombre();
+
+    void setNombre(String nombre);
+
+    String getEstado();
+
+    void setEstado(String estado);
 }

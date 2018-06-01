@@ -11,13 +11,13 @@ public class PersonaDaoImpl implements PersonaDao {
     @Override
     public List<Persona> all() {
         List<Persona> personaList = new ArrayList<>();
-        personaList.add(new PersonaImpl("0","all Spring"));
+        //personaList.add(new PersonaImpl("0","all Spring"));
         return personaList;
     }
 
     @Override
     public Persona get(String id) {
-        return new PersonaImpl("2","PersonaSpring");
+        return null;
     }
 
     @Override

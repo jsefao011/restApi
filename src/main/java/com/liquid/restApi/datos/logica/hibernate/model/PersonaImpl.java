@@ -1,167 +1,107 @@
 package com.liquid.restApi.datos.logica.hibernate.model;
 
-import com.liquid.restApi.datos.contrato.model.*;
+import com.liquid.restApi.datos.contrato.model.Persona;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import java.util.List;
+import java.util.Objects;
+
+import javax.persistence.*;
 
 /**
- * Created by Jse on 13/05/2018.
+ * Created by Jse on 28/05/2018.
  */
 @Entity
-@Table(name = "person")
-public class PersonaImpl implements Persona {
-    @Id
-    @Column(name="id")
-    private String id;
-    @Column(name="name")
+@Table(name = "api_tm_persona", schema = "api_tabla_maestras")
+public class PersonaImpl implements Persona{
+    private int id;
     private String nombre;
+    private String apMaterno;
+    private String apPaterno;
+    private String direccion;
+    private String telefono;
+    private SexoImpl sexo;
 
-    public PersonaImpl() {
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PersonaImpl that = (PersonaImpl) o;
+        return id == that.id;
     }
 
-    public PersonaImpl(String id, String nombre) {
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(id);
+    }
+
+    @Id
+    @Column(name = "p_tm_persona")
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
         this.id = id;
-        this.nombre = nombre;
     }
 
-    @Override
-    public String getId() {
-        return String.valueOf(id);
-    }
-    @Override
-    public void setId(String id) {
-        this.id = id;
-    }
-    @Override
+    @Basic
+    @Column(name = "no_persona")
     public String getNombre() {
         return nombre;
     }
-    @Override
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
-    @Override
-    public String getApellidoPaterno() {
-        return null;
+    @Basic
+    @Column(name = "ap_mat_persona")
+    public String getApMaterno() {
+        return apMaterno;
     }
 
-    @Override
-    public void setApellidoPaterno(String apellidoPaterno) {
-
+    public void setApMaterno(String apMaterno) {
+        this.apMaterno = apMaterno;
     }
 
-    @Override
-    public String getApellidoMaterno() {
-        return null;
+    @Basic
+    @Column(name = "ap_pat_persona")
+    public String getApPaterno() {
+        return apPaterno;
     }
 
-    @Override
-    public void setApellidoMaterno(String apellidoMaterno) {
-
+    public void setApPaterno(String apPaterno) {
+        this.apPaterno = apPaterno;
     }
 
-    @Override
-    public String getTelefono() {
-        return null;
-    }
-
-    @Override
-    public void setTelefono(String telefono) {
-
-    }
-
-    @Override
+    @Basic
+    @Column(name = "di_persona")
     public String getDireccion() {
-        return null;
+        return direccion;
     }
 
-    @Override
     public void setDireccion(String direccion) {
-
+        this.direccion = direccion;
     }
 
-    @Override
-    public Sexo getSexo() {
-        return null;
+    @Basic
+    @Column(name = "tlf_persona")
+    public String getTelefono() {
+        return telefono;
     }
 
-    @Override
-    public void setSexo(Sexo sexo) {
-
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
-    @Override
-    public Distrito getDistrito() {
-        return null;
+    @ManyToOne
+    @JoinColumn(name = "f_tm_sexo", referencedColumnName = "p_sexo", nullable = false)
+    public SexoImpl getSexo() {
+        return sexo;
     }
 
-    @Override
-    public void setDistrito(Distrito distrito) {
-
+    public void setSexo(SexoImpl sexo) {
+        this.sexo = sexo;
     }
 
-    @Override
-    public Religion getReligion() {
-        return null;
-    }
 
-    @Override
-    public void setReligion(Religion religion) {
-
-    }
-
-    @Override
-    public Documento getDocumento() {
-        return null;
-    }
-
-    @Override
-    public void setDocumento(Documento documento) {
-
-    }
-
-    @Override
-    public List<Discapacidad> getDiscapacidades() {
-        return null;
-    }
-
-    @Override
-    public void setDiscapacidades(List<Discapacidad> discapacidades) {
-
-    }
-
-    @Override
-    public NivelAcademico getNivelAcademico() {
-        return null;
-    }
-
-    @Override
-    public void setNivelAcademico(NivelAcademico nivelAcademico) {
-
-    }
-
-    @Override
-    public EstadoCivil getEstadoCivil() {
-        return null;
-    }
-
-    @Override
-    public void setEstadoCivil(EstadoCivil estadoCivil) {
-
-    }
-
-    @Override
-    public Discapacidad getDiscapacidad() {
-        return null;
-    }
-
-    @Override
-    public void setDiscapacidad(Discapacidad discapacidad) {
-
-    }
 }

@@ -19,9 +19,8 @@
         <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmDocumentoEntity"/>
         <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmEstadoCivilEntity"/>
         <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmNivelAcademicoEntity"/>
-        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmPersonaEntity"/>
         <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmProvinciaEntity"/>
         <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmReligionEntity"/>
-        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmSexoEntity"/>
+        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.SexoImpl"/>
     </session-factory>
 </hibernate-configuration>

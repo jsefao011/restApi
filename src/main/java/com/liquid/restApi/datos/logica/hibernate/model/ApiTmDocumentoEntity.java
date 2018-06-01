@@ -1,5 +1,9 @@
 package com.liquid.restApi.datos.logica.hibernate.model;
 
+import com.liquid.restApi.datos.contrato.model.Documento;
+
+import java.util.Objects;
+
 import javax.persistence.*;
 
 /**
@@ -7,112 +11,98 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "api_tm_documento", schema = "api_tabla_maestras")
-public class ApiTmDocumentoEntity {
-    private int tmDocumento;
-    private String dniDocumento;
-    private String cneDocumento;
-    private String rucDocumento;
-    private String pstDocumento;
-    private String ptnDocumento;
-    private String otDocumento;
+public class ApiTmDocumentoEntity implements Documento {
+    private int id;
+    private String dni;
+    private String carnetExtranjeria;
+    private String ruc;
+    private String pasaporte;
+    private String partidaNacimiento;
+    private String otroDocumetno;
 
     @Id
     @Column(name = "tm_documento")
-    public int getTmDocumento() {
-        return tmDocumento;
+    public int getId() {
+        return id;
     }
 
-    public void setTmDocumento(int tmDocumento) {
-        this.tmDocumento = tmDocumento;
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Basic
     @Column(name = "dni_documento")
-    public String getDniDocumento() {
-        return dniDocumento;
+    public String getDni() {
+        return dni;
     }
 
-    public void setDniDocumento(String dniDocumento) {
-        this.dniDocumento = dniDocumento;
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 
     @Basic
     @Column(name = "cne_documento")
-    public String getCneDocumento() {
-        return cneDocumento;
+    public String getCarnetExtranjeria() {
+        return carnetExtranjeria;
     }
 
-    public void setCneDocumento(String cneDocumento) {
-        this.cneDocumento = cneDocumento;
+
+    public void setCarnetExtranjeria(String carnetExtranjeria) {
+        this.carnetExtranjeria = carnetExtranjeria;
     }
 
     @Basic
     @Column(name = "ruc_documento")
-    public String getRucDocumento() {
-        return rucDocumento;
+    public String getRuc() {
+        return ruc;
     }
 
-    public void setRucDocumento(String rucDocumento) {
-        this.rucDocumento = rucDocumento;
+    public void setRuc(String ruc) {
+        this.ruc = ruc;
     }
 
     @Basic
     @Column(name = "pst_documento")
-    public String getPstDocumento() {
-        return pstDocumento;
+    public String getPasaporte() {
+        return pasaporte;
     }
 
-    public void setPstDocumento(String pstDocumento) {
-        this.pstDocumento = pstDocumento;
+    public void setPasaporte(String pasaporte) {
+        this.pasaporte = pasaporte;
     }
 
     @Basic
     @Column(name = "ptn_documento")
-    public String getPtnDocumento() {
-        return ptnDocumento;
+    public String getPartidaNacimiento() {
+        return partidaNacimiento;
     }
 
-    public void setPtnDocumento(String ptnDocumento) {
-        this.ptnDocumento = ptnDocumento;
+    public void setPartidaNacimiento(String partidaNacimiento) {
+        this.partidaNacimiento = partidaNacimiento;
     }
 
     @Basic
     @Column(name = "ot_documento")
-    public String getOtDocumento() {
-        return otDocumento;
+    public String getOtroDocumetno() {
+        return otroDocumetno;
     }
 
-    public void setOtDocumento(String otDocumento) {
-        this.otDocumento = otDocumento;
+    public void setOtroDocumetno(String otroDocumetno) {
+        this.otroDocumetno = otroDocumetno;
     }
+
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         ApiTmDocumentoEntity that = (ApiTmDocumentoEntity) o;
-
-        if (tmDocumento != that.tmDocumento) return false;
-        if (dniDocumento != null ? !dniDocumento.equals(that.dniDocumento) : that.dniDocumento != null) return false;
-        if (cneDocumento != null ? !cneDocumento.equals(that.cneDocumento) : that.cneDocumento != null) return false;
-        if (rucDocumento != null ? !rucDocumento.equals(that.rucDocumento) : that.rucDocumento != null) return false;
-        if (pstDocumento != null ? !pstDocumento.equals(that.pstDocumento) : that.pstDocumento != null) return false;
-        if (ptnDocumento != null ? !ptnDocumento.equals(that.ptnDocumento) : that.ptnDocumento != null) return false;
-        if (otDocumento != null ? !otDocumento.equals(that.otDocumento) : that.otDocumento != null) return false;
-
-        return true;
+        return id == that.id;
     }
 
     @Override
     public int hashCode() {
-        int result = tmDocumento;
-        result = 31 * result + (dniDocumento != null ? dniDocumento.hashCode() : 0);
-        result = 31 * result + (cneDocumento != null ? cneDocumento.hashCode() : 0);
-        result = 31 * result + (rucDocumento != null ? rucDocumento.hashCode() : 0);
-        result = 31 * result + (pstDocumento != null ? pstDocumento.hashCode() : 0);
-        result = 31 * result + (ptnDocumento != null ? ptnDocumento.hashCode() : 0);
-        result = 31 * result + (otDocumento != null ? otDocumento.hashCode() : 0);
-        return result;
+
+        return Objects.hash(id);
     }
 }

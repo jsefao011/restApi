@@ -7,21 +7,21 @@ import java.util.List;
  */
 public interface Persona {
    
-    String getId() ;
+    int getId() ;
 
-    void setId(String id);
+    void setId(int id);
 
     String getNombre();
 
     void setNombre(String nombre);
 
-    String getApellidoPaterno();
+    String getApMaterno();
 
-    void setApellidoPaterno(String apellidoPaterno);
+    void setApMaterno(String apellidoPaterno);
 
-    String getApellidoMaterno();
+    String getApPaterno();
 
-    void setApellidoMaterno(String apellidoMaterno);
+    void setApPaterno(String apellidoMaterno);
 
     String getTelefono();
 
@@ -31,7 +31,7 @@ public interface Persona {
 
     void setDireccion(String direccion);
 
-    Sexo getSexo();
+    /*Sexo getSexo();
 
     void setSexo(Sexo sexo);
 
@@ -61,5 +61,5 @@ public interface Persona {
 
     Discapacidad getDiscapacidad();
 
-    void setDiscapacidad(Discapacidad discapacidad);
+    void setDiscapacidad(Discapacidad discapacidad);*/
 }
