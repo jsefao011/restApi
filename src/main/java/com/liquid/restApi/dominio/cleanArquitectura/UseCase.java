@@ -2,7 +2,7 @@ package com.liquid.restApi.dominio.cleanArquitectura;
 
 
 @FunctionalInterface
-public interface UseCase<I extends Request, O extends Response> {
+public interface UseCase<I extends BaseRequest, O extends BaseResponse> {
 
   /**
    * Executes a business use case. Request and response object should be given

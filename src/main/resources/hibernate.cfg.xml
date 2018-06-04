@@ -11,16 +11,13 @@
         <property name="show_sql">true</property>
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
-        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.PersonaImpl"/>
-        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiRelPersonaDiscapacidadEntity"/>
-        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmDepartamentoEntity"/>
-        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmDiscapacidadEntity"/>
-        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmDistritoEntity"/>
-        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmDocumentoEntity"/>
-        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmEstadoCivilEntity"/>
-        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmNivelAcademicoEntity"/>
-        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmProvinciaEntity"/>
-        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.ApiTmReligionEntity"/>
-        <mapping class="com.liquid.restApi.datos.logica.hibernate.model.SexoImpl"/>
+        <mapping class="com.liquid.restApi.datos.model.Persona"/>
+        <mapping class="com.liquid.restApi.datos.model.Departamento"/>
+        <mapping class="com.liquid.restApi.datos.model.Distrito"/>
+        <mapping class="com.liquid.restApi.datos.model.EstadoCivil"/>
+        <mapping class="com.liquid.restApi.datos.model.NivelAcademico"/>
+        <mapping class="com.liquid.restApi.datos.model.Provincia"/>
+        <mapping class="com.liquid.restApi.datos.model.Religion"/>
+        <mapping class="com.liquid.restApi.datos.model.Sexo"/>
     </session-factory>
 </hibernate-configuration>

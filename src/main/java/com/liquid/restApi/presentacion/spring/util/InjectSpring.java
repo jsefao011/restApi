@@ -1,7 +1,6 @@
 package com.liquid.restApi.presentacion.spring.util;
 
-import com.liquid.restApi.datos.logica.spring.dao.PersonaDaoImpl;
-import com.liquid.restApi.dominio.iterador.logica.PersonaIteradorImpl;
+import com.liquid.restApi.datos.dao.logica.spring.PersonaDaoImpl;
 import com.liquid.restApi.presentacion.controller.contrato.ConsultarPersonaController;
 import com.liquid.restApi.presentacion.controller.logica.ConsultarPersonaControllerImpl;
 
@@ -11,6 +10,6 @@ import com.liquid.restApi.presentacion.controller.logica.ConsultarPersonaControl
 public class InjectSpring {
 
     public static ConsultarPersonaController injectPersonaControllerSpring(){
-        return new ConsultarPersonaControllerImpl(new PersonaIteradorImpl(new PersonaDaoImpl()));
+        return null;
     }
 }

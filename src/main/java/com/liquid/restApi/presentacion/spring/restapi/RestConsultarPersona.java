@@ -1,7 +1,11 @@
 package com.liquid.restApi.presentacion.spring.restapi;
 
-import com.liquid.restApi.datos.contrato.model.Persona;
+import com.liquid.restApi.datos.model.EstadoCivil;
+import com.liquid.restApi.datos.model.Persona;
+import com.liquid.restApi.datos.model.Religion;
+import com.liquid.restApi.datos.model.Sexo;
 import com.liquid.restApi.presentacion.controller.contrato.ConsultarPersonaController;
+import com.liquid.restApi.presentacion.controller.contrato.base.ConsultarBaseController;
 import com.liquid.restApi.presentacion.spring.util.InjectHibernate;
 
 import org.springframework.stereotype.Controller;
@@ -19,17 +23,18 @@ import java.util.concurrent.atomic.AtomicLong;
 public class RestConsultarPersona {
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
+    private final ConsultarBaseController<EstadoCivil> estadoCivilConsultarBaseController;
     private ConsultarPersonaController personaController;
 
     public RestConsultarPersona() {
         this.personaController = InjectHibernate.injectPersonaControllerHibernate();
-        //this.personaController = InjectSpring.injectPersonaControllerSpring();
+        this.estadoCivilConsultarBaseController = InjectHibernate.injectEstadoCivilControllerHibernate();
     }
 
     @GetMapping("/persona")
     @ResponseBody
-    public List<Persona> getPersona(@RequestParam(name="id", required=false, defaultValue="0") String id) {
-        return personaController.likePersona(id);
+    public EstadoCivil getPersona(@RequestParam(name="id", required=false, defaultValue="0") int id) {
+        return estadoCivilConsultarBaseController.getObjeto(id);
     }
 
 

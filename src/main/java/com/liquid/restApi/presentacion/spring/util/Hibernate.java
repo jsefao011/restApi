@@ -1,6 +1,6 @@
 package com.liquid.restApi.presentacion.spring.util;
 
-import com.liquid.restApi.datos.logica.hibernate.util.HibernateUtil5;
+import com.liquid.restApi.datos.dao.logica.hibernate.util.HibernateUtil5;
 
 /**
  * Created by Jse on 26/05/2018.
