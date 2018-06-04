@@ -1,4 +1,4 @@
-package com.liquid.restApi.presentacion.spring.util;
+package com.liquid.restApi.presentacion.spring.restapi.util;
 
 import com.liquid.restApi.datos.dao.logica.hibernate.util.HibernateUtil5;
 
